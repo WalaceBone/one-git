@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: "One Git"
+  version: "1.0.0"
+  contact:
+    name: Hugo Beaupel
+    email: heaugo@gmail.com
+    url: https://one-git.com/
+tags:
+  - name: GitHub
+    description: GitHub related requests
+  - name: GitLab
+    description: GitLab related requests
+  - name: User
+    description: User related requests
+  - name: Issue
+    description: Issue related requests
+
+paths:
+  /session:
+    post:
+      operationId: authenticate credential against DB
+      summary: Get metadata from the root of the API
+      tags: [ 'User' ]
+      responses:
+        '200':
+          description: OK
+
+  /users:
+    post:
+      operationId: createUser
+      summary: Create new user
+      tags: [ 'User' ]
+      responses:
+        '200':
+          description: OK
