@@ -34,3 +34,85 @@ paths:
       responses:
         '200':
           description: OK
+
+  /project:
+    get:
+      operationId: getProject
+      summary: Retrieve the list of all user project accross Git services
+      tags: [ 'Project', 'Repositories' ]
+      responses:
+        '200':
+          description: OK
+
+  /project/{id}:
+    get:
+      operationId: getProjectId
+      summary: Get repositorie
+      tags: [ 'Project', 'Repositories' ]
+      responses:
+        '200':
+          description: OK
+
+  /project/{id}/issue:
+    get:
+      operationId: getProjectIdIssue
+      summary: Get repositorie issues
+      tags: [ 'Project', 'Repositories', 'Issue' ]
+      responses:
+        '200':
+          description: OK
+
+  /project/{id}/issue/{id}:
+    get:
+      operationId: getProjectIdIssue
+      summary: Get repositorie issues
+      tags: [ 'Project', 'Repositories', 'Issue' ]
+      responses:
+        '200':
+          description: OK
+
+
+  /project/{id}/commit:
+    get:
+      operationId: getProjectIdCommit
+      summary: Get repositorie commits
+      tags: [ 'Project', 'Repositories' ]
+      responses:
+        '200':
+          description: OK
+
+  /project/{id}/commit/{id}:
+    get:
+      operationId: getProjectIdCommit
+      summary: Get repositorie commit by id 
+      tags: [ 'Project', 'Repositories', 'Commits' ]
+      responses:
+        '200':
+          description: OK
+
+  /commit:
+    get:
+      operationId: getCommits
+      summary: Retrieve the last commits of all user project accross Git services
+      tags: [ 'Project', 'Commits' ]
+      responses:
+        '200':
+          description: OK
+
+  /commit/{id}:
+    get:
+      operationId: getCommitId
+      summary: Get commit by Id
+      tags: [ 'Project', 'Commits' ]
+      responses:
+        '200':
+          description: OK
+
+  /issue:
+    get:
+      operationId: getIssues
+      summary: Retrieve issues of all project accross Git services 
+      tags: [ 'Project', 'Issue' ]
+      responses:
+        '200':
+          description: OK
